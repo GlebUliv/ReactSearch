@@ -14,10 +14,12 @@ const Container = styled.div`
 
 
 class NamesContainer extends Component {
+
     render() {
+
         return (
             <Container color="#004d66">
-                {this.props.names.map(name => <Name name = {name}/>)}
+                {this.props.names.map((name, index) => <Name key={index} name={name} />)}
             </Container >
         )
     }
